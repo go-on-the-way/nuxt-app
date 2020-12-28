@@ -14,7 +14,16 @@ export default {
   css: ['ant-design-vue/dist/antd.css', 'element-ui/lib/theme-chalk/index.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['@/plugins/antd-ui', '@/plugins/element-ui'],
+  plugins: [
+    '@/plugins/antd-ui',
+    '@/plugins/element-ui',
+    '@/plugins/combined-inject.js',
+  ],
+
+  // 路由中间件使用
+  router: {
+    middleware: 'routeMiddleware',
+  },
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
